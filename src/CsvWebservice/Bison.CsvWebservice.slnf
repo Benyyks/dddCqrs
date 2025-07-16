@@ -1,0 +1,11 @@
+{
+  "solution": {
+    "path": "..\\Bison.Sample.sln",
+    "projects": [
+      "CsvWebservice\\src\\Application\\CsvWebservice.Application.csproj",
+      "CsvWebservice\\src\\Domain\\CsvWebservice.Domain.csproj",
+      "CsvWebservice\\src\\Web\\CsvWebservice.Web.csproj",
+      "CsvWebservice\\tests\\Application.Tests\\CsvWebService.Application.Tests.csproj"
+    ]
+  }
+}

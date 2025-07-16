@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  csvwebservice:
+    build:
+      context: CsvWebservice
+      dockerfile: Dockerfile
+    ports:
+      - "5001:8080"
+    image: bison/csvwebservice:latest
+    container_name: csvwebservice
+    environment:
+      - UserWebServiceUrl=http://userwebservice:8080
+
+  userwebservice:
+    build:
+      context: UserWebservice
+      dockerfile: Dockerfile
+    image: bison/userwebservice:latest
+    container_name: userwebservice
+    ports:
+      - "5002:8080"
+    

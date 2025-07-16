@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>disable</Nullable>
+	<AssemblyName>Bison.$(MSBuildProjectName)</AssemblyName>
+	<RootNamespace>Bison.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+  </PropertyGroup>
+
+</Project>

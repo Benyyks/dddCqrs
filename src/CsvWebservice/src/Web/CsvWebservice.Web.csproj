@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+	<Nullable>disable</Nullable>
+	<AssemblyName>Bison.$(MSBuildProjectName)</AssemblyName>
+	<RootNamespace>Bison.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.RateLimiting" Version="7.0.0-rc.2.22476.2" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\CsvWebservice.Application.csproj" />
+  </ItemGroup>
+
+</Project>

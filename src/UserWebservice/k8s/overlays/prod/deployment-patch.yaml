@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: userwebservice
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: userwebservice
+          image: someregistry.io/test/userwebservice:latest
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Production"

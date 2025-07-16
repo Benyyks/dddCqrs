@@ -1,0 +1,12 @@
+{
+  "solution": {
+    "path": "..\\Bison.Sample.sln",
+    "projects": [
+      "UserWebservice\\src\\Application\\UserWebservice.Application\\UserWebservice.Application.csproj",
+      "UserWebservice\\src\\Domain\\UserWebservice.Domain.csproj",
+      "UserWebservice\\src\\Infrastructure\\UserWebservice.Infrastructure.csproj",
+      "UserWebservice\\src\\Web\\UserWebservice.Web.csproj",
+      "UserWebservice\\tests\\Application.Tests\\UserWebservice.Application.Tests.csproj"
+    ]
+  }
+}

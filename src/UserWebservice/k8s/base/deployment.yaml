@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: userwebservice
+  labels:
+    app: userwebservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: userwebservice
+  template:
+    metadata:
+      labels:
+        app: userwebservice
+    spec:
+      containers:
+      - name: userwebservice
+        image: bison/userwebservice:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "TO_CHANGE"  # Change this value based on the environment
+        resources:
+          requests:
+            memory: "50Mi"
+            cpu: "50m"
+          limits:
+            memory: "100Mi"
+            cpu: "100m"

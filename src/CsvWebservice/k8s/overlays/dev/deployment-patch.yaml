@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: csvwebservice
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: csvwebservice
+          imagePullPolicy: Never
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Development"
+          volumeMounts:
+            - name: config-volume
+              mountPath: /app/config
+      volumes:
+      - name: config-volume
+        configMap:
+          name: dev-csvwebservice-app-config
